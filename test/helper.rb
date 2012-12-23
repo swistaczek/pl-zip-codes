@@ -12,7 +12,7 @@ require 'shoulda'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'polish-flexiv-name-endings'
+require 'polish-flexive-name-endings'
 
 class Test::Unit::TestCase
 end

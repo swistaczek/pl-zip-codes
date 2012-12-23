@@ -1,5 +1,5 @@
 = Polish flexive name endings
-With this simple gem you will be able to get Polish flexive name endings and find out gender of the bearer.
+With this simple gem (covered with basic specs) you will be able to get Polish flexive name endings and find out gender of the bearer.
 
 == Instalation
 To use this gem just require it with Bundler support in yours **Gemfile**:

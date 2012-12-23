@@ -1,5 +1,5 @@
 # encoding: utf-8
-require 'faster_csv'
+require 'csv'
 
 class PolishNames
   CSV_FILENAME  = 'lib.csv'
@@ -9,7 +9,7 @@ class PolishNames
     def load_data
       if @data.nil?
         @data = {}
-        FasterCSV.foreach(CSV_FILENAME, headers: true, col_sep: CSV_SEPARATOR) do |csv_obj|
+        CSV.foreach(File.expand_path("../#{CSV_FILENAME}", __FILE__), headers: true, col_sep: CSV_SEPARATOR) do |csv_obj|
           @data[csv_obj['imie'].downcase] = {
             flexive: csv_obj['odmiana'],
             gender: csv_obj['plec'] == "M" ? :male : (csv_obj['plec'] == "K" ? :female : :unknown ),
