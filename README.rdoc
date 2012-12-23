@@ -4,16 +4,12 @@ With this simple gem (covered with basic specs) you will be able to get Polish f
 == Instalation
 To use this gem just require it with Bundler support in yours **Gemfile**:
 
-```
-gem 'polish-flexive-name-endings'
-```
+    gem 'polish-flexive-name-endings'
 
 == Usage
 
-```ruby
-PolishNames.parse_name('Ernest')
-# => { flexive: "Ernest", gender: :male, sylable: 2 }
-```
+    PolishNames.parse_name('Ernest')
+    # => { flexive: "Ernest", gender: :male, sylable: 2 }
 
 == Contributing to polish-flexive-name-endings
  
