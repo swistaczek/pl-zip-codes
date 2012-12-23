@@ -1,4 +1,6 @@
 = Polish flexive name endings
+{<img src="https://travis-ci.org/swistaczek/polish-flexive-name-endings.png?branch=master" alt="Build Status" />}[https://travis-ci.org/swistaczek/polish-flexive-name-endings]
+
 With this simple gem (covered with basic specs) you will be able to get Polish flexive name endings and find out gender of the bearer.
 
 == Instalation
