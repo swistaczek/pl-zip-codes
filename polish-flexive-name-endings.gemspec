@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "lib/polish-flexive-name-endings.rb",
     "lib/polish-flexive-name-endings/lib.csv",
     "lib/polish-flexive-name-endings/polish-flexive-name-endings.rb",
+    "polish-flexive-name-endings.gemspec",
     "test/helper.rb",
     "test/test_polish_flexive_name_endings.rb"
   ]
