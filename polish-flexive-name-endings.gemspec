@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ernest Bursa"]
   s.date = "2012-12-23"
-  s.description = "Find out flexive name ending and bearded gender for Polish language"
+  s.description = "Find out flexive name ending and beared gender for Polish language"
   s.email = "ernest@bzdury.pl"
   s.extra_rdoc_files = [
     "LICENSE.txt",

@@ -9,7 +9,7 @@ To use this gem just require it with Bundler support in yours **Gemfile**:
 == Usage
 
     PolishNames.parse_name('Ernest')
-    # => { flexive: "Ernest", gender: :male, sylable: 2 }
+    # => { flexive: "Erneście", gender: :male, sylable: 2 }
 
 == Contributing to polish-flexive-name-endings
  
