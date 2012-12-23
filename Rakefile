@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "polish-flexiv-name-endings"
-  gem.homepage = "http://github.com/swistaczek/polish-flexiv-name-endings"
+  gem.name = "polish-flexive-name-endings"
+  gem.homepage = "http://github.com/swistaczek/polish-flexive-name-endings"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Find out flexive name ending and bearded gender for Polish language}
+  gem.description = %Q{Find out flexive name ending and bearded gender for Polish language}
   gem.email = "ernest@bzdury.pl"
   gem.authors = ["Ernest Bursa"]
   # dependencies defined in Gemfile
@@ -32,14 +32,6 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
-
 task :default => :test
 
 require 'rdoc/task'
@@ -47,7 +39,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "polish-flexiv-name-endings #{version}"
+  rdoc.title = "polish-flexive-name-endings #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
