@@ -2,17 +2,26 @@
 require 'helper'
 
 class TestPlZipCodes < Test::Unit::TestCase
-  context "a parsed 'Ernest' name" do
+  context "a zipcode for street Jaskiniowa and Wielkopolskie region" do
     setup do
-      @name = PolishNames.parse_name("Ernest")
+      @poznan_code = PlZipCodes.find {|x| x[:street] == "Jaskiniowa" and x[:region] == "Wielkopolskie" }    
     end
 
-    should "return flexive form for the input name" do
-      assert_equal 'Erneście', @name[:flexive]
+    should "return array with one result" do
+      assert_equal 1, @poznan_code.size
     end
 
-    should "return gender of the bearer" do
-      assert_equal :male, @name[:gender]
+    should "return array with hash with city in keys" do
+      assert_equal true, @poznan_code.map(&:keys)[0].include?(:city)
     end
+
+    should "return array with hash with code in keys" do
+      assert_equal true, @poznan_code.map(&:keys)[0].include?(:code)
+    end
+
+    should "return array with hash with province in keys" do
+      assert_equal true, @poznan_code.map(&:keys)[0].include?(:province)
+    end
+
   end
 end
