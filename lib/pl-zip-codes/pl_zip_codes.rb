@@ -13,7 +13,7 @@ class PlZipCodes
           @data << {
             code: csv_obj[1],
             city: csv_obj[2] || csv_obj[3].capitalize.match(/(\S+).+/)[1],
-            province: csv_obj[3].capitalize,
+            province: csv_obj[3],
             street: csv_obj[5],
             region: csv_obj[4].capitalize,
             notes: csv_obj[6]
