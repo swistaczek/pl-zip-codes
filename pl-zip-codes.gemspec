@@ -27,7 +27,9 @@ Gem::Specification.new do |s|
     "lib/pl-zip-codes.rb",
     "lib/pl-zip-codes/lib.csv",
     "lib/pl-zip-codes/pl_zip_codes.rb",
-    "test/helper.rb"
+    "pl-zip-codes.gemspec",
+    "test/helper.rb",
+    "test/test_pl_zip_codes.rb"
   ]
   s.homepage = "http://github.com/swistaczek/pl-zip-codes"
   s.licenses = ["MIT"]
