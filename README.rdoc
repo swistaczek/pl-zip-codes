@@ -1,17 +1,27 @@
-= Polish flexive name endings
-{<img src="https://travis-ci.org/swistaczek/polish-flexive-name-endings.png?branch=master" alt="Build Status" />}[https://travis-ci.org/swistaczek/polish-flexive-name-endings]
+= Pl Zip Codes
+{<img src="https://travis-ci.org/swistaczek/pl-zip-codes.png?branch=master" alt="Build Status" />}[https://travis-ci.org/swistaczek/pl-zip-codes]
 
-With this simple gem (covered with basic specs) you will be able to get Polish flexive name endings and find out gender of the bearer.
+With this simple gem (covered with basic specs) you will be able to get zip codes database for Poland.
 
 == Instalation
 To use this gem just require it with Bundler support in yours **Gemfile**:
 
-    gem 'polish-flexive-name-endings'
+    gem 'pl-zip-codes'
 
 == Usage
 
-    PolishNames.parse_name('Ernest')
-    # => { flexive: "Erneście", gender: :male, sylable: 2 }
+    PlZipCodes.find('60-115').map {|x| x[:street] }
+    # => ["Bohaterów Westerplatte", "Jaskiniowa", "Kępińska", "Leszczyńska", "Leszczyńska", "Na Uboczu", "Poniecka", "Przełęcz", "Żlebowa"] 
+
+    PlZipCodes.find('60-115')
+    # => [{:code=>"60-115", :city=>"Poznań", :province=>"Poznań (poznań-grunwald)", :street=>"Bohaterów Westerplatte", :region=>"Wielkopolskie", :notes=>"m. Poznań"}, {:code=>"60-115", :city=>"Poznań", :province=>"Poznań (poznań-grunwald)", :street=>"Jaskiniowa", :region=>"Wielkopolskie", :notes=>"m. Poznań"}, {:code=>"60-115", :city=>"Poznań", :province=>"Poznań (poznań-grunwald)", :street=>"Kępińska", :region=>"Wielkopolskie", :notes=>"m. Poznań"}, {:code=>"60-115", :city=>"Poznań", :province=>"Poznań (poznań-grunwald)", :street=>"Leszczyńska", :region=>"Wielkopolskie", :notes=>"m. Poznań"}, {:code=>"60-115", :city=>"Poznań", :province=>"Poznań (poznań-grunwald)", :street=>"Leszczyńska", :region=>"Wielkopolskie", :notes=>"m. Poznań"}, {:code=>"60-115", :city=>"Poznań", :province=>"Poznań (poznań-grunwald)", :street=>"Na Uboczu", :region=>"Wielkopolskie", :notes=>"m. Poznań"}, {:code=>"60-115", :city=>"Poznań", :province=>"Poznań (poznań-grunwald)", :street=>"Poniecka", :region=>"Wielkopolskie", :notes=>"m. Poznań"}, {:code=>"60-115", :city=>"Poznań", :province=>"Poznań (poznań-grunwald)", :street=>"Przełęcz", :region=>"Wielkopolskie", :notes=>"m. Poznań"}, {:code=>"60-115", :city=>"Poznań", :province=>"Poznań (poznań-grunwald)", :street=>"Żlebowa", :region=>"Wielkopolskie", :notes=>"m. Poznań"}]
+
+    PlZipCodes.find {|record| record[:street] == 'Sienkiewicza Henryka' and record[:city] == 'Warszawa' and record[:province].include?('Śródmieście') }
+    # => [{:code=>"00-010", :city=>"Warszawa", :province=>"Warszawa (Śródmieście)", :street=>"Sienkiewicza Henryka", :region=>"Mazowieckie", :notes=>"m. st. Warszawa"}, {:code=>"00-015", :city=>"Warszawa", :province=>"Warszawa (Śródmieście)", :street=>"Sienkiewicza Henryka", :region=>"Mazowieckie", :notes=>"m. st. Warszawa"}, {:code=>"00-015", :city=>"Warszawa", :province=>"Warszawa (Śródmieście)", :street=>"Sienkiewicza Henryka", :region=>"Mazowieckie", :notes=>"m. st. Warszawa"}]
+
+== Database source
+GUS / Poczta Polska (03.2009). 
+Kudos to Piotr Zaniewicz (http://piotr.eldora.pl/) for sharing database.
 
 == Contributing to polish-flexive-name-endings
  
@@ -25,5 +35,5 @@ To use this gem just require it with Bundler support in yours **Gemfile**:
 
 == Copyright
 
-Copyright (c) 2012 Ernest Bursa - http://ernest.bzdury.pl 
+Copyright (c) 2013 Ernest Bursa - http://ernest.bzdury.pl 
 See LICENSE.txt for further details.

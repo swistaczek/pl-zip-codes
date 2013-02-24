@@ -14,13 +14,14 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "polish-flexive-name-endings"
-  gem.homepage = "http://github.com/swistaczek/polish-flexive-name-endings"
+  gem.name = "pl-zip-codes"
+  gem.homepage = "http://github.com/swistaczek/pl-zip-codes"
   gem.license = "MIT"
-  gem.summary = %Q{Find out flexive name ending and bearded gender for Polish language}
-  gem.description = %Q{Find out flexive name ending and bearded gender for Polish language}
+  gem.summary = %Q{Simple zip codes database for Poland}
+  gem.description = %Q{Simple zip codes database for Poland}
   gem.email = "ernest@bzdury.pl"
   gem.authors = ["Ernest Bursa"]
+  gem.files.include 'lib/**/*' 
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -39,7 +40,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "polish-flexive-name-endings #{version}"
+  rdoc.title = "pl-zip-codes #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
