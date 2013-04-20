@@ -2,7 +2,7 @@
 {<img src="https://travis-ci.org/swistaczek/pl-zip-codes.png?branch=master" alt="Build Status" />}[https://travis-ci.org/swistaczek/pl-zip-codes]
 
 With this simple gem (covered with basic specs) you will be able to get zip codes database for Poland.
-This project uses 17 mb CSV database as data source so first call will take couple seconds to complete.
+This project uses *17 mb CSV* database as data source so first call will take couple seconds to complete.
 
 == Instalation
 To use this gem just require it with Bundler support in yours **Gemfile**:
@@ -24,7 +24,7 @@ To use this gem just require it with Bundler support in yours **Gemfile**:
 GUS / Poczta Polska (03.2009). 
 Kudos to Piotr Zaniewicz (http://piotr.eldora.pl/) for sharing database.
 
-== Contributing to polish-flexive-name-endings
+== Contributing
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
